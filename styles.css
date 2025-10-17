@@ -1,0 +1,39 @@
+/* Oxy Force - Simple Demo Styles */
+:root{
+  --blue:#1e88e5;
+  --sky:#cfe9ff;
+  --nav:#083f6b;
+  --maxwidth:1100px;
+  --accent:#0b61b3;
+  --muted:#6b7280;
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter, system-ui, Arial, sans-serif}
+body{color:#05233a;line-height:1.5;background:#f8fbff}
+.container{max-width:var(--maxwidth);margin:0 auto;padding:32px}
+.header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo{display:flex;align-items:center;gap:12px}
+.logo .mark{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--blue),#63a4ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+nav a{margin-left:18px;color:var(--nav);text-decoration:none;font-weight:600}
+.hero{display:flex;gap:48px;align-items:center;padding:48px 0}
+.hero-left{flex:1}
+.h1{font-size:44px;color:var(--nav);margin-bottom:12px}
+.lead{color:var(--muted);margin-bottom:18px;font-size:18px}
+.cta{display:inline-block;background:var(--accent);color:white;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700}
+.hero-right{flex:0 0 360px;background:linear-gradient(180deg, #ffffff, #eaf6ff);padding:24px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.product-img{max-width:260px;width:100%;height:auto;display:block}
+
+.section{padding:48px 0;border-top:1px solid rgba(10,30,60,0.04);background:white;margin-top:24px;border-radius:12px}
+.section h2{font-size:28px;color:var(--nav);margin-bottom:12px}
+.cards{display:flex;gap:18px;flex-wrap:wrap}
+.card{flex:1 1 220px;background:#fbfeff;border-radius:10px;padding:18px;border:1px solid rgba(10,30,60,0.04)}
+.card img{width:100%;height:160px;object-fit:cover;border-radius:8px;margin-bottom:12px}
+
+.footer{margin-top:32px;padding:28px 0;color:var(--muted);font-size:14px;display:flex;justify-content:space-between;align-items:center}
+
+/* responsive */
+@media (max-width:900px){
+  .hero{flex-direction:column}
+  .hero-right{order:-1;width:100%}
+  .header{flex-direction:column;align-items:flex-start;gap:12px}
+}
